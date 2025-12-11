@@ -13,7 +13,9 @@ namespace Tyuiu.MolchanovIV.Sprint6.Task2.V13.Lib
             for (int i = startValue; i <= stopValue; i++)
             {
                 if (2 * i / 3 == 0)
-                { res[i] = 0;  continue; }
+                {
+                    res[i] = 0;  continue; 
+                }
                 res[i] = Math.Round(Math.Sin(i) + 2 * i / 3 - Math.Cos(i) * 4 * i, 2);
             }
 
