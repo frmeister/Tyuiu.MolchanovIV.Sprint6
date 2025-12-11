@@ -12,8 +12,8 @@ namespace Tyuiu.MolchanovIV.Sprint6.Task1.V8.Lib
 
             for (int i = startValue; i <= stopValue; i++)
             {
-                res[cur] = (Math.Cos(i) / (i - 0.4)) + (Math.Sin(i) * 8 * i) + 2;
-
+                res[cur] = Math.Round((Math.Cos(i) / (i - 0.4)) + (Math.Sin(i) * 8 * i) + 2, 2);
+                
                 cur++;
             }
 
