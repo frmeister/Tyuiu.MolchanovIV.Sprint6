@@ -8,6 +8,7 @@ namespace Tyuiu.MolchanovIV.Sprint6.Task5.V18.Lib
         public double[] LoadFromDataFile(string path)
         {
             int len = 0;
+            int count = 0;
 
             string filepath = $@"{Path.GetTempPath()}";
             string filename = "OutPutDataFileTask5V18.txt";
@@ -29,7 +30,7 @@ namespace Tyuiu.MolchanovIV.Sprint6.Task5.V18.Lib
             using (StreamReader reader = new StreamReader(path))
             {
                 string line;
-                int count = 0;
+
                 while ((line = reader.ReadLine()) != null)
                 {
 
@@ -43,7 +44,18 @@ namespace Tyuiu.MolchanovIV.Sprint6.Task5.V18.Lib
                 }
             }
 
-        return res;
+            double[] output = new double[count];
+            int c = 0;
+
+            for (int i = 0; i < res.Length; i++)
+            {
+                
+                if (res[i] == 0) break;
+                output[c] = res[i];
+                c++;
+            }
+
+        return output;
         }
     }
 }
