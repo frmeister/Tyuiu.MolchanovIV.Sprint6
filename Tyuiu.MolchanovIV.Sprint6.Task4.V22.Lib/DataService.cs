@@ -13,7 +13,7 @@ namespace Tyuiu.MolchanovIV.Sprint6.Task4.V22.Lib
 
             for (int i = 0; i < len; i++)
             {
-                result[i] = Math.Round(Math.Sin(curValue) + (Math.Cos(curValue) / 2 - 1.5 * curValue), 2);
+                result[i] = Math.Round(Math.Sin(curValue) + ((Math.Cos(2*curValue) / 2) - 1.5 * curValue), 2);
                 curValue++;
             }
 
@@ -21,3 +21,4 @@ namespace Tyuiu.MolchanovIV.Sprint6.Task4.V22.Lib
         }
     }
 }
+// expected: [8.04,6.68,4.84,1.76,0.45,0.5,-0.87,-2.42,-3.88,-6.83,-8.88]
