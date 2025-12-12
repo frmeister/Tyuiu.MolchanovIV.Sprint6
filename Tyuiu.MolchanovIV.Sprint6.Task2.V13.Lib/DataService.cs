@@ -6,11 +6,11 @@ namespace Tyuiu.MolchanovIV.Sprint6.Task2.V13.Lib
     {
         public double[] GetMassFunction(int startValue, int stopValue)
         {
-            int arrLen = (stopValue - startValue);
+            int arrLen = stopValue - startValue + 1;
 
             double[] res = new double[arrLen];
 
-            for (int i = startValue; i <= stopValue; i++)
+            for (int i = 0; i < arrLen; i++)
             {
                 if (2 * i / 3 == 0)
                 {
