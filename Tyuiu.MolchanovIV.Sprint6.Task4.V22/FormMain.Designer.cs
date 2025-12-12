@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             panelMain = new Panel();
             buttonQuestion_MIV = new Button();
             buttonSave_MIV = new Button();
@@ -220,19 +220,19 @@
             // 
             // chart_MIV
             // 
-            chartArea2.Name = "ChartArea1";
-            chart_MIV.ChartAreas.Add(chartArea2);
+            chartArea1.Name = "ChartArea1";
+            chart_MIV.ChartAreas.Add(chartArea1);
             chart_MIV.Dock = DockStyle.Fill;
-            legend2.Name = "Legend1";
-            chart_MIV.Legends.Add(legend2);
+            legend1.Name = "Legend1";
+            chart_MIV.Legends.Add(legend1);
             chart_MIV.Location = new Point(3, 0);
             chart_MIV.Name = "chart_MIV";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series2.IsVisibleInLegend = false;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            chart_MIV.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.IsVisibleInLegend = false;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            chart_MIV.Series.Add(series1);
             chart_MIV.Size = new Size(587, 311);
             chart_MIV.TabIndex = 1;
             // 
