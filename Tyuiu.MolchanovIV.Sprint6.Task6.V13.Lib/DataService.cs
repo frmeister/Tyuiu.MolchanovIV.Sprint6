@@ -1,4 +1,5 @@
-﻿using System.Collections.Specialized;
+﻿using System.Collections.Generic;
+using System.Collections.Specialized;
 using tyuiu.cources.programming.interfaces.Sprint6;
 
 namespace Tyuiu.MolchanovIV.Sprint6.Task6.V13.Lib
@@ -9,13 +10,15 @@ namespace Tyuiu.MolchanovIV.Sprint6.Task6.V13.Lib
         {
             string res = "";
 
+
             using (StreamReader reader = new StreamReader(path))
             {
                 string line;
+                bool firstWord = true;
 
                 while ((line = reader.ReadLine()) != null)
                 {
-                    int[] count = {0, 0};
+                    int[] count = { 0, 0 };
 
                     for (int i = 0; i < line.Length; i++)
                     {
@@ -27,12 +30,23 @@ namespace Tyuiu.MolchanovIV.Sprint6.Task6.V13.Lib
                         }
                     }
 
-                    for (int i = count[0] + 1; i < count[1]; i++)
+                    if (count[1] > 0 && count[0] < count[1])
                     {
-                        res += line[i];
+                        if (!firstWord)
+                        {
+                            res += " ";
+                        }
+                        else
+                        {
+                            firstWord = false;
+                        }
+
+                        for (int i = count[0] + 1; i < count[1]; i++)
+                        {
+                            res += line[i];
+                        }
                     }
 
-                    res += " ";
                 }
             }
 
