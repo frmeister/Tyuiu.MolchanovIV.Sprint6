@@ -37,7 +37,14 @@ namespace Tyuiu.MolchanovIV.Sprint6.Task6.V13
 
         private void buttonPerform_MIV_Click(object sender, EventArgs e)
         {
-            textBoxOutput_MIV.Text = ds.CollectTextFromFile(openFilePath);
+            try
+            {
+                textBoxOutput_MIV.Text = ds.CollectTextFromFile(openFilePath);
+            }
+            catch
+            {
+                MessageBox.Show("¬ведены неверные данные", "ќшибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
